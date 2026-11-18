@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civic Issue Reporting System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="logo">CivicCare</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#report">Report Issue</a>
+            <a href="#track">Track</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+
+    <!-- Home -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+            <p class="small-title">SMART CIVIC ISSUE MANAGEMENT</p>
+
+            <h1>
+                Report a Problem.
+                <span>Improve Your City.</span>
+            </h1>
+
+            <p>
+                Report road damage, garbage, street light,
+                water leakage and other civic issues easily.
+            </p>
+
+            <a href="#report" class="btn">
+                Report an Issue
+            </a>
+        </div>
+
+    </section>
+
+
+    <!-- Features -->
+    <section class="features">
+
+        <div class="card">
+            <h2>01</h2>
+            <h3>Easy Reporting</h3>
+            <p>
+                Citizens can easily report civic problems
+                with description and location.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>02</h2>
+            <h3>Smart Detection</h3>
+            <p>
+                AI can identify the category and priority
+                of the complaint.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>03</h2>
+            <h3>Track Status</h3>
+            <p>
+                Users can track their complaint status.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- Report Issue -->
+    <section id="report" class="report">
+
+        <h2>Report a Civic Issue</h2>
+
+        <form id="complaintForm">
+
+            <label>Issue Category</label>
+
+            <select id="category" required>
+                <option value="">Select Category</option>
+                <option>Road Damage</option>
+                <option>Garbage</option>
+                <option>Street Light</option>
+                <option>Water Leakage</option>
+                <option>Drainage</option>
+                <option>Other</option>
+            </select>
+
+
+            <label>Location</label>
+
+            <input
+                type="text"
+                id="location"
+                placeholder="Enter location"
+                required
+            >
+
+
+            <label>Description</label>
+
+            <textarea
+                id="description"
+                rows="5"
+                placeholder="Describe the problem"
+                required
+            ></textarea>
+
+
+            <label>Upload Photo</label>
+
+            <input
+                type="file"
+                id="photo"
+                accept="image/*"
+            >
+
+
+            <label>Priority</label>
+
+            <select id="priority">
+                <option>Auto Detect</option>
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+            </select>
+
+
+            <button type="submit" class="btn">
+                Submit Complaint
+            </button>
+
+        </form>
+
+        <p id="message"></p>
+
+    </section>
+
+
+    <!-- Track Complaint -->
+    <section id="track" class="track">
+
+        <h2>Track Complaint</h2>
+
+        <input
+            type="text"
+            id="complaintId"
+            placeholder="Enter Complaint ID"
+        >
+
+        <button onclick="trackComplaint()" class="btn">
+            Track
+        </button>
+
+        <p id="trackResult"></p>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about" class="about">
+
+        <h2>About Our Project</h2>
+
+        <p>
+            AI-Powered Civic Issue Detection and Resolution System
+            helps citizens report public problems and helps departments
+            manage and resolve complaints efficiently.
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            © 2026 CivicCare | Civic Issue Management System
+        </p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
